@@ -14,22 +14,28 @@ class ImageGridViewController: UIViewController {
     private lazy var dataSource = makeDataSource()
     
     let imageListViewModel : ImageListViewModel
-
+    
     //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+//        layoutCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         layoutCollectionView()
+
     }
     
     //MARK: - init
-      init(imageListViewModel : ImageListViewModel) {
-          self.imageListViewModel = imageListViewModel
-          super.init(nibName: nil, bundle: nil)
-      }
-      
-      required init?(coder: NSCoder) {
-          fatalError("init(coder:) has not been implemented")
-      }
+    init(imageListViewModel : ImageListViewModel) {
+        self.imageListViewModel = imageListViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     
     private func layoutCollectionView() {
@@ -47,7 +53,7 @@ class ImageGridViewController: UIViewController {
         let collectionView =  UICollectionView(frame: view.bounds, collectionViewLayout:UIConfig.createCompositionalLayout())
         collectionView.backgroundColor = .clear
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.reuseId)
-        //        collectionView.delegate = self
+        collectionView.delegate = self
         collectionView.dataSource = dataSource
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -57,4 +63,16 @@ class ImageGridViewController: UIViewController {
         return ImagesCollectionViewDataSource(imageListViewModel: imageListViewModel)
     }
     
+}
+
+extension ImageGridViewController : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let image = imageListViewModel.image(at: indexPath.row)
+        print(image.previewWidth)
+        return CGSize(width: CGFloat(image.previewWidth), height: CGFloat(image.previewHeight))
+    }
+    
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+    }
 }

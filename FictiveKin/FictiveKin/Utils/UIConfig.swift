@@ -9,13 +9,22 @@
 import UIKit
 
 struct UIConfig {
+    
+    static func createFlowLayout() -> UICollectionViewFlowLayout {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.sectionInset = UIEdgeInsets(top: 1, left: 5, bottom: 1, right: 5)
+        flowLayout.minimumInteritemSpacing = 10
+        return flowLayout
+    }
+    
     static func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
+                
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
-                                              heightDimension: .estimated(300))
+                                              heightDimension: .estimated(100))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .estimated(300))
+                                               heightDimension: .estimated(100))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
 //        group.interItemSpacing = .fixed(15)     // item spacing
         

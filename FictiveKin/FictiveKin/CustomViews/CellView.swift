@@ -23,23 +23,37 @@ class CellView: UIView {
     }
     
     private func configure() {
-        let stackView = UIStackView(arrangedSubviews: [imageView,userInfoLabel])
-        stackView.axis = .vertical
-        stackView.distribution = .equalCentering
-        stackView.alignment = .center
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.layer.borderColor = UIColor.textColor.cgColor
-        self.layer.borderWidth = 1.0
-        self.layer.cornerRadius = 7.0
-        addSubview(stackView)
         
+        
+        addSubview(imageView)
+        self.translatesAutoresizingMaskIntoConstraints = false
+
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: Constraints.padding),
-            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constraints.padding),
-            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Constraints.padding),
-            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Constraints.padding)
+            imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            imageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
+
+        
+        
+//        let stackView = UIStackView(arrangedSubviews: [imageView])
+//        stackView.axis = .vertical
+//        stackView.distribution = .equalCentering
+//        stackView.alignment = .center
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        self.translatesAutoresizingMaskIntoConstraints = false
+//        self.layer.borderColor = UIColor.textColor.cgColor
+//        self.layer.borderWidth = 1.0
+//        self.layer.cornerRadius = 7.0
+//        addSubview(stackView)
+//
+//        NSLayoutConstraint.activate([
+//            stackView.topAnchor.constraint(equalTo: self.topAnchor, constant: Constraints.padding),
+//            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constraints.padding),
+//            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Constraints.padding),
+//            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Constraints.padding)
+//        ])
     }
     
     func setup(with userInfo : String,and url : URL?) {
