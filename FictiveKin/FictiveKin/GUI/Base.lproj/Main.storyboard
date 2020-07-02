@@ -58,6 +58,7 @@
                     <connections>
                         <outlet property="actionButton" destination="GdO-Qr-XCE" id="9tP-Ec-3n2"/>
                         <outlet property="searchTextField" destination="YB3-k1-4uJ" id="9iv-b8-6gr"/>
+                        <outlet property="searchTextFieldCenterConstraint" destination="Qjm-vL-YSv" id="yFc-ab-uk0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

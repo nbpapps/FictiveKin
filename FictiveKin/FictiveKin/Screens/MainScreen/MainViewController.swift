@@ -11,6 +11,9 @@ import UIKit
 final class MainViewController: UIViewController {
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchTextFieldCenterConstraint: NSLayoutConstraint!
+    
+    private lazy var logicController = makeLogicController()
     
     //MARK: - life cycle
     override func viewDidLoad() {
@@ -27,6 +30,12 @@ final class MainViewController: UIViewController {
         title = Texts.mainTitle
         let tap = UITapGestureRecognizer(target: self, action: #selector(userDidTapScreen))
         view.addGestureRecognizer(tap)
+        if UIDevice.current.screenType == .iPhones_5_5s_5c_SE {
+            searchTextFieldCenterConstraint.constant = -50
+            UIView.animate(withDuration: 0.2) {
+                self.view.layoutIfNeeded()
+            }
+        }
     }
     
     private func configureViewAppearing() {
@@ -77,29 +86,17 @@ final class MainViewController: UIViewController {
     }
     
     private func shouldHideActionButton(_ hidden : Bool,withAnimation animate : Bool) {
-        
-        var alpha : CGFloat = 1.0
-        var enabled = true
-        var animationDuration : TimeInterval = 0.0
-        
-        if hidden {
-            alpha = 0.0
-            enabled = false
-        }
-        
-        if animate {
-            if hidden {
-                animationDuration = 0.7
-            }else{
-                animationDuration = 2.7
-            }
-        }
-        
-        let animator = UIViewPropertyAnimator(duration: animationDuration , curve: .easeOut) {
-            self.actionButton.alpha = alpha
-            self.actionButton.isUserInteractionEnabled = enabled
+        let animatorProperties = logicController.shouldHideActionButton(hidden, withAnimation: animate)
+        let animator = UIViewPropertyAnimator(duration: animatorProperties.animationDuration , curve: .easeOut) {
+            self.actionButton.alpha = animatorProperties.alpha
+            self.actionButton.isUserInteractionEnabled = animatorProperties.enabled
         }
         animator.startAnimation()
+    }
+    
+    //MARK: - factory
+    private func makeLogicController() -> MainScreenLogicController {
+        return MainScreenLogicController()
     }
 }
 
@@ -118,19 +115,8 @@ extension MainViewController : UITextFieldDelegate {
             return true
         }
         
-        if text.isEmpty {
-            //in this case the text field was empty
-            if string != "" {
-                //and the user entered a string that is not "delete"
-                shouldHideActionButton(false, withAnimation: true)
-            }
-        }
-        else {
-            //the text is not empty
-            if text.count == 1 && string == "" {
-                //there is only one character in the text field and the user erased it
-                shouldHideActionButton(true, withAnimation: true)
-            }
+        if let textFieldEmpty = logicController.textFieldIsEmpty(with: text, andAdded: string) {
+            shouldHideActionButton(textFieldEmpty, withAnimation: true)
         }
         
         return true
