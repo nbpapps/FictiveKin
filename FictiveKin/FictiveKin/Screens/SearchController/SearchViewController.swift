@@ -15,6 +15,7 @@ final class SearchViewController: UIViewController {
     private lazy var imageGridViewController = makeImageGridController()
     
     let imageListViewModel : ImageListViewModel
+    let searchText : String
     
     //MARK: - life cycle
     override func viewDidLoad() {
@@ -26,8 +27,9 @@ final class SearchViewController: UIViewController {
     
     
     //MARK: - init
-    init(imageListViewModel : ImageListViewModel) {
+    init(imageListViewModel : ImageListViewModel,searchText : String) {
         self.imageListViewModel = imageListViewModel
+        self.searchText = searchText
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -42,7 +44,7 @@ final class SearchViewController: UIViewController {
     
     //MARK: - create search request
     private func createSearchRequest() {
-        logicController.newSearchRequest { [weak self] (state) in
+        logicController.newSearchRequest(for: searchText) { [weak self] (state) in
             guard let self = self else {return}
             self.renderScreen(for: state)
         }

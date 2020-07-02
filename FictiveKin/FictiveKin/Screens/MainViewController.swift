@@ -8,25 +8,56 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var searchTextField: UITextField!
     
     //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        showSearchController()
+//        showSearchController(for: "car")
+        searchTextField.becomeFirstResponder()
+        shouldHideUI(false)
+        searchTextField.text = ""
+    }
+    
+    //MARK: - configure
+    private func configureView() {
+        
     }
     
     //MARK: - actions
     @IBAction func actionButtonTapped(_ sender: UIButton) {
-        showSearchController()
+        userDidTapActionButton()
     }
     
-    @objc private func showSearchController() {
-        let searchController = SearchViewController(imageListViewModel: ImageListViewModel())
+    private func userDidTapActionButton() {
+        guard let searchText = searchTextField.text, !searchText.isEmpty else {
+            //show error screen
+            return
+        }
+        shouldHideUI(true)
+        showSearchController(for: searchText)
+    }
+    
+    private func showSearchController(for searchText : String) {
+        let searchController = SearchViewController(imageListViewModel: ImageListViewModel(), searchText: searchText)
         navigationController?.pushViewController(searchController, animated: true)
     }
+    
+    private func shouldHideUI(_ hiddenState : Bool) {
+        searchTextField.isHidden = hiddenState
+        actionButton.isHidden = hiddenState
+    }
+    
+    //MARK: - text field
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }

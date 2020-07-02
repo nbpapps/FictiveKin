@@ -24,8 +24,8 @@ struct SearchLogicController {
     }
     
     //MARK: - search request logic
-    func newSearchRequest(with completion : @escaping (SearchDisplayState) -> Void) {
-        imageListViewModel.createNewSearch { (error) in
+    func newSearchRequest(for searchText : String,with completion : @escaping (SearchDisplayState) -> Void) {
+        imageListViewModel.createNewSearch(for: searchText) { (error) in
             DispatchQueue.main.async {
                 if let searchError = error {
                     switch searchError {

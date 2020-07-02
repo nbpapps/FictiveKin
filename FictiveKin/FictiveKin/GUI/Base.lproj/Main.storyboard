@@ -16,10 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdO-Qr-XCE">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YB3-k1-4uJ">
                                 <rect key="frame" x="20" y="423" width="374" height="50"/>
+                                <color key="tintColor" name="textColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Eub-Oi-Atv"/>
+                                    <constraint firstAttribute="height" constant="50" id="fYS-k0-LQp"/>
+                                </constraints>
+                                <color key="textColor" name="textColor"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PzF-m7-hS7"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdO-Qr-XCE">
+                                <rect key="frame" x="20" y="481" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5PO-Pe-Szt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="30"/>
                                 <state key="normal" title="Search">
@@ -32,15 +45,19 @@
                         </subviews>
                         <color key="backgroundColor" name="mainColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GdO-Qr-XCE" secondAttribute="trailing" constant="20" id="HSy-Cc-4Eg"/>
-                            <constraint firstItem="GdO-Qr-XCE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mgU-Y1-5hg"/>
-                            <constraint firstItem="GdO-Qr-XCE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yul-t3-UhA"/>
+                            <constraint firstItem="GdO-Qr-XCE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="16Q-rr-ywZ"/>
+                            <constraint firstItem="YB3-k1-4uJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2L3-Yw-S1q"/>
+                            <constraint firstItem="GdO-Qr-XCE" firstAttribute="top" secondItem="YB3-k1-4uJ" secondAttribute="bottom" constant="8" id="J4i-sv-yOW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YB3-k1-4uJ" secondAttribute="trailing" constant="20" id="dtP-1H-Sg0"/>
+                            <constraint firstItem="YB3-k1-4uJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tUe-zc-weA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GdO-Qr-XCE" secondAttribute="trailing" constant="20" id="z4i-JL-Yut"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="9CW-Xp-ujR"/>
                     <connections>
                         <outlet property="actionButton" destination="GdO-Qr-XCE" id="9tP-Ec-3n2"/>
+                        <outlet property="searchTextField" destination="YB3-k1-4uJ" id="9iv-b8-6gr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
