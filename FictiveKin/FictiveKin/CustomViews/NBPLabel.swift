@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NBPLabel: UILabel {
+final class NBPLabel: UILabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -16,7 +16,7 @@ class NBPLabel: UILabel {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("Storyboard not implemented")
+        fatalError(Texts.noStoryboard)
     }
     
     init(textAlignment : NSTextAlignment = .center, fontSize : CGFloat = 14.0,weight : UIFont.Weight = .regular,color : UIColor = .textColor) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageGridViewController: UIViewController {
+final class ImageGridViewController: UIViewController {
     
     private lazy var collectionView = makeCollectionView()
     private lazy var dataSource = makeDataSource()
@@ -18,13 +18,11 @@ class ImageGridViewController: UIViewController {
     //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        layoutCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         layoutCollectionView()
-
     }
     
     //MARK: - init
@@ -34,9 +32,8 @@ class ImageGridViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(Texts.noStoryboard)
     }
-    
     
     private func layoutCollectionView() {
         view.addSubview(collectionView)
@@ -50,7 +47,7 @@ class ImageGridViewController: UIViewController {
     
     //MARK: - factory
     private func makeCollectionView() -> UICollectionView {
-        let collectionView =  UICollectionView(frame: view.bounds, collectionViewLayout:UIConfig.createCompositionalLayout2())
+        let collectionView =  UICollectionView(frame: view.bounds, collectionViewLayout:UIConfig.createCompositionalLayout())
         collectionView.backgroundColor = .clear
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.reuseId)
         collectionView.delegate = self
@@ -73,7 +70,6 @@ class ImageGridViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension ImageGridViewController : UICollectionViewDelegate {
@@ -85,4 +81,5 @@ extension ImageGridViewController : UICollectionViewDelegate {
         }
     }
 }
+
 

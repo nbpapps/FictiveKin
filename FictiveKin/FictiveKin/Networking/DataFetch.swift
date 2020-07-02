@@ -43,7 +43,6 @@ struct DataFetching {
         }
     }
     
-    
     private func buildURL(for searchText : String,with page : Int) -> URL? {
         let queryItems : [URLQueryItem] = [
             URLQueryItem(name: UrlBuilder.apiKey, value: UrlBuilder.apiValue),

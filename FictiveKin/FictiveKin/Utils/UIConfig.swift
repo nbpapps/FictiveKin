@@ -10,17 +10,17 @@ import UIKit
 
 struct UIConfig {
     
-    static func createCompositionalLayout2() -> UICollectionViewCompositionalLayout {
+    static func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         
-        let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(150),
-                                              heightDimension: .estimated(150))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(UICollectionView.dimensionEstimation),
+                                              heightDimension: .estimated(UICollectionView.dimensionEstimation))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .estimated(150))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(UICollectionView.fullFractionalDimension),
+                                               heightDimension: .estimated(UICollectionView.dimensionEstimation))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        group.interItemSpacing = .flexible(15)
-        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+        group.interItemSpacing = .flexible(UICollectionView.itemSpacing)
+        group.contentInsets = NSDirectionalEdgeInsets(top: UICollectionView.contentInsetsVertical, leading: UICollectionView.contentInsetsHorizontal, bottom: UICollectionView.contentInsetsVertical, trailing: UICollectionView.contentInsetsHorizontal)
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout

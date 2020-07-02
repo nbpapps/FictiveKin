@@ -38,8 +38,5 @@ import Foundation
 
 struct Image : Codable {
     var previewURL : String
-//    var previewWidth : Float
-//    var previewHeight : Float
     var largeImageURL : String
-//    var user : String
 }

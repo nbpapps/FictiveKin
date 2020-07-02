@@ -10,7 +10,6 @@ import Foundation
 
 struct Texts {
     
-    //user texts
     static let mainTitle = "Image Search"
     static let missingText = "Please enter an image category you would like to search for"
     static let dismiss = "OK"
@@ -18,5 +17,8 @@ struct Texts {
     static let noResults = "There are no results for the requested image category. Please select another category"
     
     static let imageCellId = "ImageCell"
-
+    
+    static let incorrectCell = "incorrect cell"
+    static let noStoryboard = "no storyboard"
+    
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITextFieldDelegate {
+final class MainViewController: UIViewController {
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var searchTextField: UITextField!
     
@@ -19,7 +19,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-                showSearchController(for: "car")
         configureViewAppearing()
     }
     
@@ -64,7 +63,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: - view update
-    
     private func showMissingTextMessage() {
         searchTextField.resignFirstResponder()
         let messageViewController = MessageViewController(message: Texts.missingText)
@@ -88,7 +86,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             alpha = 0.0
             enabled = false
         }
-         
+        
         if animate {
             if hidden {
                 animationDuration = 0.7
@@ -103,10 +101,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         }
         animator.startAnimation()
     }
-    
-    
-    
-    //MARK: - text field
+}
+
+extension MainViewController : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if let text = textField.text, !text.isEmpty {
@@ -138,5 +135,4 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         
         return true
     }
-    
 }

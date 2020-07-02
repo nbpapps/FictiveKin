@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MessageViewController: UIViewController {
+final class MessageViewController: UIViewController {
     
     var onDismissButtonTap : () -> () = {}
     
@@ -26,18 +26,17 @@ class MessageViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(Texts.noStoryboard)
     }
     
     private func configureMessageLabel() {
         let messageLabel = UILabel(frame: .zero)
         messageLabel.numberOfLines = 0
         messageLabel.textAlignment = .center
-        messageLabel.font = UIFont(name: "Hoefler Text", size: 25.0)
+        messageLabel.font = UIFont.messageFont
         messageLabel.textColor = .textColor
         
         messageLabel.text = message
-
         
         let dismissButton = UIButton(frame: .zero)
         dismissButton.setTitle(Texts.dismiss, for: .normal)
@@ -49,10 +48,10 @@ class MessageViewController: UIViewController {
         
         view.addSubview(messageLabel)
         view.addSubview(dismissButton)
-
+        
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         dismissButton.translatesAutoresizingMaskIntoConstraints = false
-
+        
         
         NSLayoutConstraint.activate([
             messageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -63,7 +62,7 @@ class MessageViewController: UIViewController {
             dismissButton.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: Constraints.padding),
             dismissButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constraints.padding),
             dismissButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -Constraints.padding),
-            dismissButton.heightAnchor.constraint(equalToConstant: 50)
+            dismissButton.heightAnchor.constraint(equalToConstant: Constraints.messageButtonHeight)
             
         ])
     }
@@ -71,6 +70,4 @@ class MessageViewController: UIViewController {
     @objc private func dismissButtonTapped() {
         onDismissButtonTap()
     }
-    
-    
 }

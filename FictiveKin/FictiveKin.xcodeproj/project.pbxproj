@@ -24,6 +24,9 @@
 		E8A511A624AE3991006FE1A5 /* NBPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A511A524AE3991006FE1A5 /* NBPButton.swift */; };
 		E8A511A824AE39FF006FE1A5 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A511A724AE39FF006FE1A5 /* Images.swift */; };
 		E8A511AA24AE4763006FE1A5 /* UIScrollView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A511A924AE4763006FE1A5 /* UIScrollView+Utils.swift */; };
+		E8A511AC24AE6706006FE1A5 /* UICollectionView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A511AB24AE6706006FE1A5 /* UICollectionView+Utils.swift */; };
+		E8A511B024AE6BB4006FE1A5 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A511AF24AE6BB4006FE1A5 /* UIImageView+Utils.swift */; };
+		E8A511B224AE6D73006FE1A5 /* UIFont+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A511B124AE6D73006FE1A5 /* UIFont+Utils.swift */; };
 		E8E91CD024ADB02600171C7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E91CCF24ADB02600171C7E /* AppDelegate.swift */; };
 		E8E91CD224ADB02600171C7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E91CD124ADB02600171C7E /* SceneDelegate.swift */; };
 		E8E91CD724ADB02600171C7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E91CD524ADB02600171C7E /* Main.storyboard */; };
@@ -62,6 +65,9 @@
 		E8A511A524AE3991006FE1A5 /* NBPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBPButton.swift; sourceTree = "<group>"; };
 		E8A511A724AE39FF006FE1A5 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		E8A511A924AE4763006FE1A5 /* UIScrollView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Utils.swift"; sourceTree = "<group>"; };
+		E8A511AB24AE6706006FE1A5 /* UICollectionView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Utils.swift"; sourceTree = "<group>"; };
+		E8A511AF24AE6BB4006FE1A5 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
+		E8A511B124AE6D73006FE1A5 /* UIFont+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Utils.swift"; sourceTree = "<group>"; };
 		E8E91CCC24ADB02600171C7E /* FictiveKin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FictiveKin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E91CCF24ADB02600171C7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8E91CD124ADB02600171C7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -241,6 +247,9 @@
 				E825775124ADC570000C5CD9 /* UIViewController+Utils.swift */,
 				E825775524ADC954000C5CD9 /* UIConfig.swift */,
 				E8A511A924AE4763006FE1A5 /* UIScrollView+Utils.swift */,
+				E8A511AB24AE6706006FE1A5 /* UICollectionView+Utils.swift */,
+				E8A511AF24AE6BB4006FE1A5 /* UIImageView+Utils.swift */,
+				E8A511B124AE6D73006FE1A5 /* UIFont+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -387,6 +396,7 @@
 			files = (
 				E825775424ADC7F7000C5CD9 /* ImageGridViewController.swift in Sources */,
 				E8E91CF924ADB62100171C7E /* Image.swift in Sources */,
+				E8A511B024AE6BB4006FE1A5 /* UIImageView+Utils.swift in Sources */,
 				E8E91D0424ADBE9A00171C7E /* ImageListViewModel.swift in Sources */,
 				E825775D24ADCBE6000C5CD9 /* ImagesCollectionViewDataSource.swift in Sources */,
 				E825776524ADD43C000C5CD9 /* Constraints.swift in Sources */,
@@ -401,6 +411,7 @@
 				E8E91CF324ADB47800171C7E /* UrlBuilder.swift in Sources */,
 				E8E91CEF24ADB32B00171C7E /* NetworkService.swift in Sources */,
 				E825775824ADCA43000C5CD9 /* ImageCell.swift in Sources */,
+				E8A511AC24AE6706006FE1A5 /* UICollectionView+Utils.swift in Sources */,
 				E8E91CF524ADB58800171C7E /* JsonParser.swift in Sources */,
 				E8E91CD224ADB02600171C7E /* SceneDelegate.swift in Sources */,
 				E8E91CF724ADB60B00171C7E /* FullResponse.swift in Sources */,
@@ -413,6 +424,7 @@
 				E825775624ADC954000C5CD9 /* UIConfig.swift in Sources */,
 				E825775F24ADD0A9000C5CD9 /* CellView.swift in Sources */,
 				E8A511A624AE3991006FE1A5 /* NBPButton.swift in Sources */,
+				E8A511B224AE6D73006FE1A5 /* UIFont+Utils.swift in Sources */,
 				E825776324ADD1A2000C5CD9 /* NBPLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

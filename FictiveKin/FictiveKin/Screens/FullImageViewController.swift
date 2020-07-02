@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class FullImageViewController: UIViewController {
+final class FullImageViewController: UIViewController {
     
     private lazy var fullImageView = makeFullImageView()
     private lazy var shareButton = makeShareButton()
@@ -35,7 +35,7 @@ class FullImageViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(Texts.noStoryboard)
     }
     
     //MARK: - configure
@@ -47,7 +47,6 @@ class FullImageViewController: UIViewController {
         fullImageView.kf.indicatorType = .activity
         fullImageView.kf.setImage(with: fullImageUrl)
     }
-    
     
     //MARK: - layout
     private func layoutView() {
@@ -95,7 +94,7 @@ class FullImageViewController: UIViewController {
     
     //MARK: - factory
     private func makeFullImageView() -> NBPImageView{
-        let imageView = NBPImageView(cornerRadius: 15)
+        let imageView = NBPImageView(cornerRadius: UIImageView.fullImageCornerRadius)
         imageView.contentMode = .scaleAspectFit
         return imageView
     }

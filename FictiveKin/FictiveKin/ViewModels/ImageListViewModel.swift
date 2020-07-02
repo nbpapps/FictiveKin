@@ -13,12 +13,12 @@ enum SearchError : Error {
     case noResults
 }
 
-class ImageListViewModel {
-
+final class ImageListViewModel {
+    
     private var imageList = [Image]()
     private var searchText = ""
     private var page = 1
-
+    
     var numberOfImages : Int {
         imageList.count
     }
@@ -54,7 +54,6 @@ extension ImageListViewModel {
             }
         }
     }
-    
     
     private func fetchImages(with completion : @escaping (SearchError?)->Void) {
         let dataFetch = DataFetching()

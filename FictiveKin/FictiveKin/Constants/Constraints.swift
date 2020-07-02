@@ -12,4 +12,6 @@ struct Constraints {
     static let padding : CGFloat = 10
     static let buttonPadding : CGFloat = 20
     static let iconButtonSize : CGFloat = 40
+    
+    static let messageButtonHeight : CGFloat = 50
 }

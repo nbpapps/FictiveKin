@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageCell: UICollectionViewCell {
+final class ImageCell: UICollectionViewCell {
     static let reuseId = Texts.imageCellId
     
     let cellView = CellView(frame: .zero)
@@ -19,7 +19,7 @@ class ImageCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("no storyboard")
+        fatalError(Texts.noStoryboard)
     }
     
     private func configure() {
@@ -39,7 +39,7 @@ class ImageCell: UICollectionViewCell {
             
             cellView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             cellView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-
+            
             cellView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             cellView.heightAnchor.constraint(equalTo:  contentView.heightAnchor),
             cellView.widthAnchor.constraint(lessThanOrEqualTo: contentView.widthAnchor)

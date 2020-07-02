@@ -9,12 +9,15 @@
 import UIKit
 
 extension UIScrollView {
+    
+    static let pointCheckBeforeFullOffset : CGFloat = 50
+    
     func didReachEndOfList() -> Bool {
         let offsetY = self.contentOffset.y
         let contentHeight = self.contentSize.height
         let height = self.frame.size.height
         
-        if offsetY - 50 > contentHeight - height {
+        if offsetY - UIScrollView.pointCheckBeforeFullOffset > contentHeight - height {
             return true
         }else{
             return false

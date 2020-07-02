@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CellView: UIView {
+final class CellView: UIView {
     
-    let imageView = NBPImageView(cornerRadius: 20)
+    let imageView = NBPImageView(cornerRadius: UIImageView.imageCornerRadius)
     
     override init(frame : CGRect) {
         super.init(frame: frame)
@@ -18,7 +18,7 @@ class CellView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(Texts.noStoryboard)
     }
     
     private func configure() {

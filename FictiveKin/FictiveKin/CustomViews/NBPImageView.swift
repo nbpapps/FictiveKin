@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class NBPImageView: UIImageView {
+final class NBPImageView: UIImageView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -17,7 +17,7 @@ class NBPImageView: UIImageView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("Storyboard not implemented")
+        fatalError(Texts.noStoryboard)
     }
     
     public init(cornerRadius : CGFloat) {

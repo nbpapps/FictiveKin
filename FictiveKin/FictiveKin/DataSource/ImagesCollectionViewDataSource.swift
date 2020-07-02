@@ -24,7 +24,7 @@ final class ImagesCollectionViewDataSource : NSObject, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.reuseId, for: indexPath) as? ImageCell else {
-            preconditionFailure("incorrect cell")
+            preconditionFailure(Texts.incorrectCell)
         }
         
         let imageInfo = imageListViewModel.image(at: indexPath.row)

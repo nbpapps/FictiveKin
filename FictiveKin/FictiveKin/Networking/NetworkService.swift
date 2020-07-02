@@ -14,11 +14,11 @@ struct NetworkService {
             
             if let networkError = error {
                 //we have an error in the network call
-                completion(.failure(.networkError(errorMessage: "The network error was \(networkError)")))
+                completion(.failure(.networkError(errorMessage: "\(networkError)")))
             }
             
             guard let networkResponse = response as? HTTPURLResponse, networkResponse.statusCode == 200 else {
-                completion(.failure(.invalidResponse(errorMessage: "the response was \(String(describing: response))")))
+                completion(.failure(.invalidResponse(errorMessage: "\(String(describing: response))")))
                 return
             }
             

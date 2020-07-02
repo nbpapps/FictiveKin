@@ -34,14 +34,13 @@ final class SearchViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(Texts.noStoryboard)
     }
     
     //MARK: - configure view
     private func configureView() {
         view.backgroundColor = .mainColor
         title = searchText
-
     }
     
     //MARK: - create search request

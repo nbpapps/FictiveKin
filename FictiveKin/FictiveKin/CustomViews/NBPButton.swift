@@ -16,12 +16,10 @@ final class NBPButton: UIButton {
     }
     
     required init?(coder: NSCoder) {
-        //this is the init for story board
-        fatalError("Storyboard not implemented")
+        fatalError(Texts.noStoryboard)
     }
     
-    
-    public init(backgroundColor : UIColor = .clear,title : String = "",borderColor : UIColor = .clear,image : UIImage? = nil,tintColor : UIColor = .textColor) {
+    init(backgroundColor : UIColor = .clear,title : String = "",borderColor : UIColor = .clear,image : UIImage? = nil,tintColor : UIColor = .textColor) {
         super.init(frame: .zero)
         self.backgroundColor = backgroundColor
         self.setTitle(title, for: .normal)
@@ -35,7 +33,7 @@ final class NBPButton: UIButton {
         layer.cornerRadius = 10
         layer.borderWidth = 2.0
         setTitleColor(.label, for: .normal)
-        titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline) //this is for dynamic type
-        translatesAutoresizingMaskIntoConstraints = false //this will let us use AutoLayout
+        titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+        translatesAutoresizingMaskIntoConstraints = false
     }
 }
