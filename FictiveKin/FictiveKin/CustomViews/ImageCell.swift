@@ -38,6 +38,8 @@ class ImageCell: UICollectionViewCell {
             contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             cellView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            cellView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+
             cellView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             cellView.heightAnchor.constraint(equalTo:  contentView.heightAnchor),
             cellView.widthAnchor.constraint(lessThanOrEqualTo: contentView.widthAnchor)

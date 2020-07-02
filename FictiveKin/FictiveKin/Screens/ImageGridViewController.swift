@@ -50,7 +50,7 @@ class ImageGridViewController: UIViewController {
     
     //MARK: - factory
     private func makeCollectionView() -> UICollectionView {
-        let collectionView =  UICollectionView(frame: view.bounds, collectionViewLayout:UIConfig.createCompositionalLayout())
+        let collectionView =  UICollectionView(frame: view.bounds, collectionViewLayout:UIConfig.createCompositionalLayout2())
         collectionView.backgroundColor = .clear
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.reuseId)
         collectionView.delegate = self
