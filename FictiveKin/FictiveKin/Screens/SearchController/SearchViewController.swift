@@ -96,8 +96,13 @@ final class SearchViewController: UIViewController {
         let messageViewController = MessageViewController(message: messageText)
         messageViewController.onDismissButtonTap = {
             messageViewController.remove()
+            self.navigateBackToMainScreen()
         }
         add(messageViewController)
+    }
+    
+    private func navigateBackToMainScreen() {
+        navigationController?.popViewController(animated: true)
     }
     
     

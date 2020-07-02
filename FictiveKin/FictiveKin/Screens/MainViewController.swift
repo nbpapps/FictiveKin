@@ -26,6 +26,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     //MARK: - configure
     private func configureView() {
         title = Texts.mainTitle
+        let tap = UITapGestureRecognizer(target: self, action: #selector(userDidTapScreen))
+        view.addGestureRecognizer(tap)
     }
     
     private func configureViewAppearing() {
@@ -38,10 +40,10 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - actions
     @IBAction func actionButtonTapped(_ sender: UIButton) {
-        userDidTapActionButton()
+        checkSearchText()
     }
     
-    private func userDidTapActionButton() {
+    private func checkSearchText() {
         guard let searchText = searchTextField.text, !searchText.isEmpty else {
             showMissingTextMessage()
             return
@@ -56,12 +58,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         navigationController?.pushViewController(searchController, animated: true)
     }
     
+    @objc private func userDidTapScreen() {
+        //we use a tap on the screen to select the text field
+        searchTextField.becomeFirstResponder()
+    }
+    
     //MARK: - view update
-    
-    
-    //    private func shouldHideActionButton(_ hiddenState : Bool) {
-    //        actionButton.isHidden = hiddenState
-    //    }
     
     private func showMissingTextMessage() {
         searchTextField.resignFirstResponder()
@@ -88,7 +90,11 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         }
          
         if animate {
-            animationDuration = 0.9
+            if hidden {
+                animationDuration = 0.7
+            }else{
+                animationDuration = 1.3
+            }
         }
         
         let animator = UIViewPropertyAnimator(duration: animationDuration , curve: .easeOut) {
@@ -103,6 +109,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     //MARK: - text field
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        if let text = textField.text, !text.isEmpty {
+            checkSearchText()
+        }
         return true
     }
     
