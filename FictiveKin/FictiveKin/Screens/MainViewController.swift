@@ -19,7 +19,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//                showSearchController(for: "car")
+                showSearchController(for: "car")
         configureViewAppearing()
     }
     

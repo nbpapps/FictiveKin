@@ -63,6 +63,17 @@ class ImageGridViewController: UIViewController {
         return ImagesCollectionViewDataSource(imageListViewModel: imageListViewModel)
     }
     
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.didReachEndOfList() {
+            imageListViewModel.showNextPage { [weak self](error) in
+                guard let self = self else {return}
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
+    }
+    
 }
 
 extension ImageGridViewController : UICollectionViewDelegate {
@@ -70,8 +81,8 @@ extension ImageGridViewController : UICollectionViewDelegate {
         let imageInfo = imageListViewModel.image(at: indexPath.row)
         if let fullImageUrl = URL(string:imageInfo.largeImageURL) {
             let fullImageViewController = FullImageViewController(fullImageUrl: fullImageUrl)
-//            fullImageViewController.modalPresentationStyle = .fullScreen
             navigationController?.present(fullImageViewController, animated: true, completion: nil)
         }
     }
 }
+

@@ -44,6 +44,17 @@ extension ImageListViewModel {
         }
     }
     
+    func showNextPage(with completion : @escaping (SearchError?)->Void) {
+        page += 1
+        self.fetchImages { (error) in
+            if let _ = error {
+                completion(.generalServerError)
+            }else{
+                completion(nil)
+            }
+        }
+    }
+    
     
     private func fetchImages(with completion : @escaping (SearchError?)->Void) {
         let dataFetch = DataFetching()

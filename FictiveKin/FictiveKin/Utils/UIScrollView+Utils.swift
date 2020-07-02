@@ -14,7 +14,7 @@ extension UIScrollView {
         let contentHeight = self.contentSize.height
         let height = self.frame.size.height
         
-        if offsetY > contentHeight - height {
+        if offsetY - 50 > contentHeight - height {
             return true
         }else{
             return false
