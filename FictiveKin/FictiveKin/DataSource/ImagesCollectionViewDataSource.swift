@@ -28,9 +28,7 @@ final class ImagesCollectionViewDataSource : NSObject, UICollectionViewDataSourc
         }
         
         let imageInfo = imageListViewModel.image(at: indexPath.row)
-       
-        cell.setupCell(with: imageInfo.user, and: URL(string:imageInfo.previewURL))
-        
+        cell.setupCell(with: URL(string:imageInfo.previewURL))
         return cell
     }
     

@@ -65,14 +65,13 @@ class ImageGridViewController: UIViewController {
     
 }
 
-extension ImageGridViewController : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let image = imageListViewModel.image(at: indexPath.row)
-        print(image.previewWidth)
-        return CGSize(width: CGFloat(image.previewWidth), height: CGFloat(image.previewHeight))
-    }
-    
+extension ImageGridViewController : UICollectionViewDelegate {
      func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
+        let imageInfo = imageListViewModel.image(at: indexPath.row)
+        if let fullImageUrl = URL(string:imageInfo.largeImageURL) {
+            let fullImageViewController = FullImageViewController(fullImageUrl: fullImageUrl)
+//            fullImageViewController.modalPresentationStyle = .fullScreen
+            navigationController?.present(fullImageViewController, animated: true, completion: nil)
+        }
     }
 }

@@ -46,8 +46,8 @@ class ImageCell: UICollectionViewCell {
         ])
     }
     
-    func setupCell(with userInfo : String,and url : URL? = nil) {
-        cellView.setup(with: userInfo, and: url)
+    func setupCell(with url : URL? = nil) {
+        cellView.setup(with: url)
     }
     
     //this is how we "reset" images in the cell when it gets the prepareForReuse call

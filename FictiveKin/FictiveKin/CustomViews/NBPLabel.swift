@@ -28,8 +28,6 @@ class NBPLabel: UILabel {
     }
     
     private func configure() {
-//        adjustsFontSizeToFitWidth = true
-//        minimumScaleFactor = 0.9
         numberOfLines = 0
         translatesAutoresizingMaskIntoConstraints = false
     }

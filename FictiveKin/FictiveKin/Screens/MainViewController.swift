@@ -19,7 +19,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-                showSearchController(for: "car")
+//                showSearchController(for: "car")
         configureViewAppearing()
     }
     
@@ -93,7 +93,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             if hidden {
                 animationDuration = 0.7
             }else{
-                animationDuration = 1.3
+                animationDuration = 2.7
             }
         }
         
