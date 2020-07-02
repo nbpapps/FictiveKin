@@ -9,4 +9,6 @@
 import UIKit
 extension UIColor {
     static let mainColor = UIColor(named: "mainColor")!
+    static let textColor = UIColor(named: "textColor")!
+
 }

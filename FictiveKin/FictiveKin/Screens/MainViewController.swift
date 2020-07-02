@@ -16,13 +16,17 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        showSearchController()
+    }
+    
     //MARK: - actions
     @IBAction func actionButtonTapped(_ sender: UIButton) {
         showSearchController()
     }
     
     @objc private func showSearchController() {
-        let searchController = SearchViewController()
+        let searchController = SearchViewController(imageListViewModel: ImageListViewModel())
         navigationController?.pushViewController(searchController, animated: true)
     }
 }

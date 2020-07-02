@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		E4775C413141B8ADB97A5E70 /* Pods_FictiveKin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AADD64FC501B642F2D5301F /* Pods_FictiveKin.framework */; };
+		E825775024ADC4E2000C5CD9 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825774F24ADC4E2000C5CD9 /* LoadingViewController.swift */; };
+		E825775224ADC570000C5CD9 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825775124ADC570000C5CD9 /* UIViewController+Utils.swift */; };
+		E825775424ADC7F7000C5CD9 /* ImageGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825775324ADC7F7000C5CD9 /* ImageGridViewController.swift */; };
+		E825775624ADC954000C5CD9 /* UIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825775524ADC954000C5CD9 /* UIConfig.swift */; };
+		E825775824ADCA43000C5CD9 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825775724ADCA43000C5CD9 /* ImageCell.swift */; };
+		E825775B24ADCA6B000C5CD9 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825775A24ADCA6B000C5CD9 /* Texts.swift */; };
+		E825775D24ADCBE6000C5CD9 /* ImagesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825775C24ADCBE6000C5CD9 /* ImagesCollectionViewDataSource.swift */; };
+		E825775F24ADD0A9000C5CD9 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825775E24ADD0A9000C5CD9 /* CellView.swift */; };
+		E825776124ADD102000C5CD9 /* NBPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825776024ADD102000C5CD9 /* NBPImageView.swift */; };
+		E825776324ADD1A2000C5CD9 /* NBPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825776224ADD1A2000C5CD9 /* NBPLabel.swift */; };
+		E825776524ADD43C000C5CD9 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825776424ADD43C000C5CD9 /* Constraints.swift */; };
 		E8E91CD024ADB02600171C7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E91CCF24ADB02600171C7E /* AppDelegate.swift */; };
 		E8E91CD224ADB02600171C7E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E91CD124ADB02600171C7E /* SceneDelegate.swift */; };
 		E8E91CD724ADB02600171C7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E91CD524ADB02600171C7E /* Main.storyboard */; };
@@ -30,6 +41,17 @@
 		3AADD64FC501B642F2D5301F /* Pods_FictiveKin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FictiveKin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A4A380AF5517C559D90C8 /* Pods-FictiveKin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FictiveKin.debug.xcconfig"; path = "Target Support Files/Pods-FictiveKin/Pods-FictiveKin.debug.xcconfig"; sourceTree = "<group>"; };
 		6D2E16CF6A693ECC6DD37230 /* Pods-FictiveKin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FictiveKin.release.xcconfig"; path = "Target Support Files/Pods-FictiveKin/Pods-FictiveKin.release.xcconfig"; sourceTree = "<group>"; };
+		E825774F24ADC4E2000C5CD9 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		E825775124ADC570000C5CD9 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		E825775324ADC7F7000C5CD9 /* ImageGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridViewController.swift; sourceTree = "<group>"; };
+		E825775524ADC954000C5CD9 /* UIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfig.swift; sourceTree = "<group>"; };
+		E825775724ADCA43000C5CD9 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		E825775A24ADCA6B000C5CD9 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
+		E825775C24ADCBE6000C5CD9 /* ImagesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		E825775E24ADD0A9000C5CD9 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		E825776024ADD102000C5CD9 /* NBPImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBPImageView.swift; sourceTree = "<group>"; };
+		E825776224ADD1A2000C5CD9 /* NBPLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBPLabel.swift; sourceTree = "<group>"; };
+		E825776424ADD43C000C5CD9 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		E8E91CCC24ADB02600171C7E /* FictiveKin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FictiveKin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E91CCF24ADB02600171C7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8E91CD124ADB02600171C7E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +162,8 @@
 			children = (
 				E8E91CFA24ADB9CF00171C7E /* MainViewController.swift */,
 				E8E91D0024ADBE0300171C7E /* SearchController */,
+				E825774F24ADC4E2000C5CD9 /* LoadingViewController.swift */,
+				E825775324ADC7F7000C5CD9 /* ImageGridViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -147,6 +171,10 @@
 		E8E91CE624ADB29C00171C7E /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				E825775724ADCA43000C5CD9 /* ImageCell.swift */,
+				E825775E24ADD0A9000C5CD9 /* CellView.swift */,
+				E825776024ADD102000C5CD9 /* NBPImageView.swift */,
+				E825776224ADD1A2000C5CD9 /* NBPLabel.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -171,6 +199,7 @@
 		E8E91CE924ADB2CC00171C7E /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				E825775C24ADCBE6000C5CD9 /* ImagesCollectionViewDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -196,6 +225,8 @@
 		E8E91CEC24ADB2FC00171C7E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E825775124ADC570000C5CD9 /* UIViewController+Utils.swift */,
+				E825775524ADC954000C5CD9 /* UIConfig.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -204,6 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				E8E91CFC24ADBA0100171C7E /* Colors.swift */,
+				E825775A24ADCA6B000C5CD9 /* Texts.swift */,
+				E825776424ADD43C000C5CD9 /* Constraints.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -337,19 +370,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E825775424ADC7F7000C5CD9 /* ImageGridViewController.swift in Sources */,
 				E8E91CF924ADB62100171C7E /* Image.swift in Sources */,
 				E8E91D0424ADBE9A00171C7E /* ImageListViewModel.swift in Sources */,
+				E825775D24ADCBE6000C5CD9 /* ImagesCollectionViewDataSource.swift in Sources */,
+				E825776524ADD43C000C5CD9 /* Constraints.swift in Sources */,
 				E8E91CFF24ADBD4000171C7E /* SearchViewController.swift in Sources */,
+				E825775B24ADCA6B000C5CD9 /* Texts.swift in Sources */,
 				E8E91D0224ADBE3200171C7E /* SearchLogicController.swift in Sources */,
 				E8E91CFD24ADBA0100171C7E /* Colors.swift in Sources */,
 				E8E91CF124ADB44200171C7E /* DataFetch.swift in Sources */,
 				E8E91CD024ADB02600171C7E /* AppDelegate.swift in Sources */,
+				E825775024ADC4E2000C5CD9 /* LoadingViewController.swift in Sources */,
 				E8E91CF324ADB47800171C7E /* UrlBuilder.swift in Sources */,
 				E8E91CEF24ADB32B00171C7E /* NetworkService.swift in Sources */,
+				E825775824ADCA43000C5CD9 /* ImageCell.swift in Sources */,
 				E8E91CF524ADB58800171C7E /* JsonParser.swift in Sources */,
 				E8E91CD224ADB02600171C7E /* SceneDelegate.swift in Sources */,
 				E8E91CF724ADB60B00171C7E /* FullResponse.swift in Sources */,
 				E8E91CFB24ADB9CF00171C7E /* MainViewController.swift in Sources */,
+				E825775224ADC570000C5CD9 /* UIViewController+Utils.swift in Sources */,
+				E825776124ADD102000C5CD9 /* NBPImageView.swift in Sources */,
+				E825775624ADC954000C5CD9 /* UIConfig.swift in Sources */,
+				E825775F24ADD0A9000C5CD9 /* CellView.swift in Sources */,
+				E825776324ADD1A2000C5CD9 /* NBPLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
