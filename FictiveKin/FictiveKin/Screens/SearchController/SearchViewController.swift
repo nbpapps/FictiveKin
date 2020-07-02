@@ -40,6 +40,8 @@ final class SearchViewController: UIViewController {
     //MARK: - configure view
     private func configureView() {
         view.backgroundColor = .mainColor
+        title = searchText
+
     }
     
     //MARK: - create search request
@@ -55,7 +57,7 @@ final class SearchViewController: UIViewController {
         switch state {
         case .noResults:
             removeLoading()
-            print("noResults") //show message
+            showMessageView(with: Texts.noResults)
             
         case .loading:
             showLoading()
@@ -66,7 +68,7 @@ final class SearchViewController: UIViewController {
             
         case .generalError:
             removeLoading()
-            print("generalError") //show message
+            showMessageView(with: Texts.somethingWentWrong)
         }
     }
     
@@ -90,6 +92,14 @@ final class SearchViewController: UIViewController {
         loadingViewController.remove()
     }
     
+    private func showMessageView(with messageText : String) {
+        let messageViewController = MessageViewController(message: messageText)
+        messageViewController.onDismissButtonTap = {
+            messageViewController.remove()
+        }
+        add(messageViewController)
+    }
+    
     
     //MARK: - factory
     private func makeLogicController() -> SearchLogicController {
@@ -103,9 +113,5 @@ final class SearchViewController: UIViewController {
     private func makeImageGridController() -> ImageGridViewController {
         return ImageGridViewController(imageListViewModel: imageListViewModel)
     }
-    
-    
-    
-    //MARK: - loading
     
 }
