@@ -11,7 +11,14 @@ import UIKit
 extension UICollectionView {
     static let dimensionEstimation : CGFloat = 150
     static let fullFractionalDimension : CGFloat = 1.0
+    
     static let itemSpacing : CGFloat = 15
     static let contentInsetsVertical : CGFloat = 0
     static let contentInsetsHorizontal : CGFloat = 20
 }
+
+/*
+ static let itemSpacing : CGFloat = 1
+   static let contentInsetsVertical : CGFloat = 0
+   static let contentInsetsHorizontal : CGFloat = 5
+ */

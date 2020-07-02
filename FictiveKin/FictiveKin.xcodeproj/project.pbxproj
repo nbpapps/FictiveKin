@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E4775C413141B8ADB97A5E70 /* Pods_FictiveKin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AADD64FC501B642F2D5301F /* Pods_FictiveKin.framework */; };
+		E8214A6524AE7680002610B5 /* UIDevice+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8214A6424AE7680002610B5 /* UIDevice+Utils.swift */; };
 		E825775024ADC4E2000C5CD9 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825774F24ADC4E2000C5CD9 /* LoadingViewController.swift */; };
 		E825775224ADC570000C5CD9 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825775124ADC570000C5CD9 /* UIViewController+Utils.swift */; };
 		E825775424ADC7F7000C5CD9 /* ImageGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825775324ADC7F7000C5CD9 /* ImageGridViewController.swift */; };
@@ -49,6 +50,7 @@
 		3AADD64FC501B642F2D5301F /* Pods_FictiveKin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FictiveKin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A4A380AF5517C559D90C8 /* Pods-FictiveKin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FictiveKin.debug.xcconfig"; path = "Target Support Files/Pods-FictiveKin/Pods-FictiveKin.debug.xcconfig"; sourceTree = "<group>"; };
 		6D2E16CF6A693ECC6DD37230 /* Pods-FictiveKin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FictiveKin.release.xcconfig"; path = "Target Support Files/Pods-FictiveKin/Pods-FictiveKin.release.xcconfig"; sourceTree = "<group>"; };
+		E8214A6424AE7680002610B5 /* UIDevice+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utils.swift"; sourceTree = "<group>"; };
 		E825774F24ADC4E2000C5CD9 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		E825775124ADC570000C5CD9 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		E825775324ADC7F7000C5CD9 /* ImageGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				E825775124ADC570000C5CD9 /* UIViewController+Utils.swift */,
+				E8214A6424AE7680002610B5 /* UIDevice+Utils.swift */,
 				E825775524ADC954000C5CD9 /* UIConfig.swift */,
 				E8A511A924AE4763006FE1A5 /* UIScrollView+Utils.swift */,
 				E8A511AB24AE6706006FE1A5 /* UICollectionView+Utils.swift */,
@@ -422,6 +425,7 @@
 				E825776124ADD102000C5CD9 /* NBPImageView.swift in Sources */,
 				E8A511AA24AE4763006FE1A5 /* UIScrollView+Utils.swift in Sources */,
 				E825775624ADC954000C5CD9 /* UIConfig.swift in Sources */,
+				E8214A6524AE7680002610B5 /* UIDevice+Utils.swift in Sources */,
 				E825775F24ADD0A9000C5CD9 /* CellView.swift in Sources */,
 				E8A511A624AE3991006FE1A5 /* NBPButton.swift in Sources */,
 				E8A511B224AE6D73006FE1A5 /* UIFont+Utils.swift in Sources */,
