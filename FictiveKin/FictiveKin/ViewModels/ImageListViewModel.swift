@@ -16,8 +16,12 @@ enum SearchError : Error {
 final class ImageListViewModel {
     
     private var imageList = [Image]()
-    private var searchText = ""
+    private var searchText : String
     private var page = 1
+    
+    init(searchText : String) {
+        self.searchText = searchText
+    }
     
     var numberOfImages : Int {
         imageList.count
@@ -27,18 +31,14 @@ final class ImageListViewModel {
         return imageList[index]
     }
     
-    private func resetImages() {
-        imageList.removeAll()
-        searchText = ""
-        page = 1
+    var currentSearchText : String {
+        searchText
     }
 }
 
 extension ImageListViewModel {
     //MARK: - fetching data
-    func createNewSearch(for searchText : String, with completion : @escaping (SearchError?) -> Void) {
-        resetImages()
-        self.searchText = searchText
+    func createNewSearch(with completion : @escaping (SearchError?) -> Void) {
         self.fetchImages { (error) in
             completion(error)
         }
@@ -63,7 +63,6 @@ extension ImageListViewModel {
             case .success(let fullResponse):
                 self.updateImagesList(from: fullResponse)
                 if fullResponse.totalHits == 0 { //in case we don't get back any images
-                    self.resetImages()
                     completion(.noResults)
                 }else{
                     completion(nil)

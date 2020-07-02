@@ -15,4 +15,5 @@ struct Constraints {
     
     static let messageButtonHeight : CGFloat = 50
     
+    static let keyboardAdjustment : CGFloat = -50
 }

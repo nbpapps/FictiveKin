@@ -31,7 +31,7 @@ final class MainViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(userDidTapScreen))
         view.addGestureRecognizer(tap)
         if UIDevice.current.screenType == .iPhones_5_5s_5c_SE {
-            searchTextFieldCenterConstraint.constant = -50
+            searchTextFieldCenterConstraint.constant = Constraints.keyboardAdjustment
             UIView.animate(withDuration: 0.2) {
                 self.view.layoutIfNeeded()
             }
@@ -62,7 +62,7 @@ final class MainViewController: UIViewController {
     }
     
     private func showSearchController(for searchText : String) {
-        let searchController = SearchViewController(imageListViewModel: ImageListViewModel(), searchText: searchText)
+        let searchController = SearchViewController(imageListViewModel: ImageListViewModel(searchText: searchText))
         navigationController?.pushViewController(searchController, animated: true)
     }
     
