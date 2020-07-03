@@ -41,5 +41,4 @@ extension UIDevice {
             return .unknown
         }
     }
-    
 }

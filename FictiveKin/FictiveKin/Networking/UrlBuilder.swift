@@ -9,6 +9,7 @@
 import Foundation
 
 struct UrlBuilder {
+    
     private var queryItems : [URLQueryItem]
     
     //https://pixabay.com/api/?q=kittens&key=6814610-cd083c066ad38bb511337fb2b

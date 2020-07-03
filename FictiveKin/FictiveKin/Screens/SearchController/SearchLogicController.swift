@@ -16,6 +16,7 @@ enum SearchDisplayState {
 }
 
 struct SearchLogicController {
+    
     let imageListViewModel : ImageListViewModel
     
     //MARK: - init

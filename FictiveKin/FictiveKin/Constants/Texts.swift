@@ -9,7 +9,6 @@
 import Foundation
 
 struct Texts {
-    
     static let mainTitle = "Image Search"
     static let missingText = "Please enter an image category you would like to search for"
     static let dismiss = "OK"

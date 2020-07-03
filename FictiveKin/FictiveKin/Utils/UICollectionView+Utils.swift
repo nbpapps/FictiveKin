@@ -17,8 +17,3 @@ extension UICollectionView {
     static let contentInsetsHorizontal : CGFloat = 20
 }
 
-/*
- static let itemSpacing : CGFloat = 1
-   static let contentInsetsVertical : CGFloat = 0
-   static let contentInsetsHorizontal : CGFloat = 5
- */

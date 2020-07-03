@@ -9,6 +9,7 @@
 import UIKit
 
 final class ImageCell: UICollectionViewCell {
+    
     static let reuseId = Texts.imageCellId
     
     let cellView = CellView(frame: .zero)

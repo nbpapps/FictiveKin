@@ -11,6 +11,5 @@ import UIKit
 extension UIImageView {
     static let fullImageCornerRadius : CGFloat = 20
     static let imageCornerRadius : CGFloat = 15
-
 }
 

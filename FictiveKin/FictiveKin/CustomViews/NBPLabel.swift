@@ -31,5 +31,4 @@ final class NBPLabel: UILabel {
         numberOfLines = 0
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }

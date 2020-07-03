@@ -30,7 +30,8 @@ struct MainScreenLogicController {
     }
     
     func shouldHideActionButton(_ hidden : Bool,withAnimation animate : Bool) -> (alpha : CGFloat,enabled : Bool,animationDuration : TimeInterval) {
-        
+        //for the action button, hiding it can be immediate (when moving to the search screen) and with animation (when text is entered or erased)
+        //here we decide the parameters of animating the action button, in regards to the different options
         var alpha : CGFloat = 1.0
         var enabled = true
         var animationDuration : TimeInterval = 0.0
@@ -50,5 +51,4 @@ struct MainScreenLogicController {
         
         return (alpha,enabled,animationDuration)
     }
-    
 }

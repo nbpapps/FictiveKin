@@ -9,6 +9,7 @@
 import Foundation
 
 struct NetworkService {
+    
     func makeNetworkCall(for url : URL,with completion : @escaping (Result<Data,NetworkError>) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
